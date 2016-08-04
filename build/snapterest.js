@@ -20757,17 +20757,47 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 module.exports = require('./lib/React');
 
 },{"./lib/React":28}],175:[function(require,module,exports){
+'use strict';
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var h1 = React.createElement('h1', { className: 'header' }, 'This is React');
+var MyFirstReactClass = React.createClass({
+  displayName: 'MyFirstReactClass',
 
-var p = React.createElement('p', { className: 'content' }, "And that's how it works");
+  getInitialState: function getInitialState() {
+    return {
+      isHeaderHidden: true
+    };
+  },
 
-var reactFragment = [h1, p];
+  handleClick: function handleClick() {
+    this.setState({
+      isHeaderHidden: !this.state.isHeaderHidden
+    });
+  },
 
-var section = React.createElement('section', { className: 'container' }, reactFragment);
+  render: function render() {
+    var title = 'Look at me mom. I\'m stateful';
+    var author = 'Sam the Man';
 
-ReactDOM.render(section, document.getElementById('react-application'));
+    var headerElement = React.createElement('h1', { className: 'header', key: 'header' }, title);
+
+    var authorElement = React.createElement('h3', null, author);
+
+    var buttonElement = React.createElement('button', { className: 'btn btn-default', onClick: this.handleClick, key: 'button' }, 'Toggle Header');
+
+    if (this.state.isHeaderHidden) {
+      return React.createElement('div', null, [buttonElement]);
+    }
+
+    return React.createElement('div', null, [headerElement, authorElement, buttonElement]);
+  }
+});
+
+// previously we were passing in strings as types for our React.createElement. Now we're passing in classes.
+var MyFirstReactComponent = React.createElement(MyFirstReactClass);
+
+var MyFirstreactRenderComponent = ReactDOM.render(MyFirstReactComponent, document.getElementById('react-application'));
 
 },{"react":174,"react-dom":2}]},{},[175]);
