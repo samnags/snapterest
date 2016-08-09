@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/samnags/snapterest#readme",
   "devDependencies": {
-    "babelify": "^7.3.0",
+    "babel-cli": "^6.11.4",
+    "babelify": "^6.4.0",
     "browserify": "^13.1.0",
     "gulp": "^3.9.1",
     "vinyl-source-stream": "^1.1.0"
