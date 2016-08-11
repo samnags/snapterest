@@ -33,7 +33,7 @@ var Collection = React.createClass({
       var tweets = this.props.tweets;
       var htmlMarkup = this.createHtmlMarkupStringOfTweetList();
       var removeAllTweetsFromCollection = this.props.onRemoveAllTweetsFromCollection;
-      var handleRemoveTweetFromCollection = this.props.onRemoveTweeetFromCollection;
+      var handleRemoveTweetFromCollection = this.props.onRemoveTweetFromCollection;
 
       return (
         <div>
