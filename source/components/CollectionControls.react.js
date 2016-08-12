@@ -26,9 +26,9 @@ var CollectionControls = React.createClass({
     var text = numberOfTweetsInCollection
 
     if (numberOfTweetsInCollection === 1) {
-      text = text + ' tweet in your';
+      text = text + ' tweet in your ';
     } else {
-      text = text + ' tweets in your';
+      text = text + ' tweets in your ';
     }
 
     // setting the header text as part of getHeaderText, which is then passed down to render
