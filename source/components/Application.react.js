@@ -12,9 +12,8 @@ var Application = React.createClass({
 
   addTweetToCollection: function(tweet) {
     var collectionTweets = this.state.collectionTweets;
-
+    
     collectionTweets[tweet.id] = tweet;
-
 
     // setState is a React function. Takes in argument of what you want to change about state
     this.setState({
