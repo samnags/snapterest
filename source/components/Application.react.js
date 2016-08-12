@@ -39,12 +39,12 @@ var Application = React.createClass({
   },
 
   render: function() {
+    // parent passing a callback function as property to child components
+    // this is how Stream can update application's state
     return (
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-4 text-center">
-            // parent passing a callback function as property to child components
-            // this is how Stream can update application's state
             <Stream onAddTweetToCollection = {this.addTweetToCollection} />
           </div>
 

@@ -52,7 +52,7 @@ var Collection = React.createClass({
       )
     }
 
-      return <Header text="Your collection is emptoy" />
+      return <Header text="Your collection is empty" />
   }
 
 })

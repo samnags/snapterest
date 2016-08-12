@@ -26,7 +26,7 @@ var TweetList = React.createClass({
   // we don't want to provid eit when they're exporting the collection
   getTweetElement: function (tweetId) {
     // variable that stores tweet with an ID
-    var tweet = this.props.tweets[tweetID];
+    var tweet = this.props.tweets[tweetId];
     // variable that stores a passed down Remove property
     var handleRemoveTweetFromCollection = this.props.onRemoveTweetFromCollection
     var tweetElement;

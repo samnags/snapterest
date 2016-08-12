@@ -28339,6 +28339,8 @@ var Application = React.createClass({
   },
 
   render: function render() {
+    // parent passing a callback function as property to child components
+    // this is how Stream can update application's state
     return React.createElement(
       'div',
       { className: 'container-fluid' },
@@ -28348,7 +28350,6 @@ var Application = React.createClass({
         React.createElement(
           'div',
           { className: 'col-md-4 text-center' },
-          '// parent passing a callback function as property to child components // this is how Stream can update application\'s state',
           React.createElement(Stream, { onAddTweetToCollection: this.addTweetToCollection })
         ),
         React.createElement(
@@ -28446,7 +28447,7 @@ var Collection = React.createClass({
       );
     }
 
-    return React.createElement(Header, { text: 'Your collection is emptoy' });
+    return React.createElement(Header, { text: 'Your collection is empty' });
   }
 
 });
@@ -28963,7 +28964,7 @@ var TweetList = React.createClass({
   // we don't want to provid eit when they're exporting the collection
   getTweetElement: function getTweetElement(tweetId) {
     // variable that stores tweet with an ID
-    var tweet = this.props.tweets[tweetID];
+    var tweet = this.props.tweets[tweetId];
     // variable that stores a passed down Remove property
     var handleRemoveTweetFromCollection = this.props.onRemoveTweetFromCollection;
     var tweetElement;
