@@ -22,7 +22,7 @@ var CollectionControls = React.createClass({
   },
 
   getHeaderText: function() {
-    var numberOfTweetsInCollection: this.props.numberOfTweetsInCollection;
+    var numberOfTweetsInCollection = this.props.numberOfTweetsInCollection;
     var text = numberOfTweetsInCollection
 
     if (numberOfTweetsInCollection === 1) {
@@ -48,7 +48,7 @@ var CollectionControls = React.createClass({
   setCollectionName: function(name) {
     // updates the name and then hides the form
     this.setState({
-      name: name
+      name: name,
       isEditingName: false
     });
   },
@@ -72,6 +72,7 @@ var CollectionControls = React.createClass({
         <Button
           label="Rename collection"
           handleClick={this.toggleEditCollectionName} />
+
 
         <Button
           label="Empty collection"

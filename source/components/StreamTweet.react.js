@@ -9,7 +9,7 @@ var StreamTweet = React.createClass({
     console.log('[Snapterest] StreamTweet: 1. Running getInitialState()');
 
     return {
-      numberOfCharactersIsIncreasing: null
+      numberOfCharactersIsIncreasing: null,
       headerText: null
     };
   },
@@ -20,17 +20,16 @@ var StreamTweet = React.createClass({
   componentWillMount: function() {
     console.log('[Snapterest] StreamTweet: 2. Running componentWillMount()')
 
-    return {
-      this.setState({
-        numberOfCharactersIsIncreasing: true
-        headerText: 'Latest public photo from Twitter'
-      });
-      window.snapterest = {
-        numberOfReceivedTweets: 1,
-        numberofDisplayedTweets: 1
+    this.setState({
+      numberOfCharactersIsIncreasing: true,
+      headerText: 'Latest public photo from Twitter'
+    });
+
+    window.snapterest = {
+      numberOfReceivedTweets: 1,
+      numberofDisplayedTweets: 1
       };
-    }
-  },
+    },
 
 
   // third lifecycle method invoked, right after component is inserted into DOM
@@ -94,15 +93,13 @@ var StreamTweet = React.createClass({
  componentDidUpdate: function(prevProps, prevState) {
    console.log('[Snapterest] StreamTweet: 6. Running componentDidUpdate()')
    window.snapterest.numberofDisplayedTweets++;
- }
-
+ },
 
 
  componentWillUnmount: function() {
     console.log('[Snapterest] StreamTweet: 8. Running componentWillUnmount()')
     delete window.snapterest;
   },
-
 
 
   render: function() {

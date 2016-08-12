@@ -40,7 +40,8 @@ var Tweet = React.createClass({
     // validationg onImageClick property
     // non-custon validator
     // validating that the onImageClick is a function
-    onImageClick: React.Proptype.func
+    onImageClick: React.PropTypes.func
+
   },
 
   handleImageClick: function() {

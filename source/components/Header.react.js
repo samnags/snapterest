@@ -1,6 +1,6 @@
 var React = require('react')
 
-var headerSytle = {
+var headerStyle = {
   fontSize: '16px',
   fontWeight: '300',
   display: 'inline-block',

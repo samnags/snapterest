@@ -4,6 +4,7 @@ var CollectionControls = require('./CollectionControls.react');
 var TweetList = require('./TweetList.react');
 var Header = require ('./Header.react');
 
+
 var Collection = React.createClass({
 
   createHtmlMarkupStringOfTweetList: function() {
@@ -24,10 +25,10 @@ var Collection = React.createClass({
 
   getNumberOfTweetsInCollection: function() {
     return this.getListOfTweetIds().length;
-  }
+  },
 
   render: function() {
-    var numberOfTweetsInCollection: this.getNumberOfTweetsInCollection();
+    var numberOfTweetsInCollection = this.getNumberOfTweetsInCollection();
 
     if (numberOfTweetsInCollection > 0) {
       var tweets = this.props.tweets;

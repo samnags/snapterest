@@ -2,7 +2,7 @@ var React = require('react')
 var Tweet = require('./Tweet.react.js')
 
 var listStyle = {
-  padding: '0';
+  padding: '0'
 };
 
 var listItemStyle = {
@@ -44,7 +44,7 @@ var TweetList = React.createClass({
     }
 
   return <li style={listItemStyle} key={tweet.id}>{tweetElement}</li>
-  }
+},
 
   render: function() {
     // taking each individual tweet and returning a tweetElement
